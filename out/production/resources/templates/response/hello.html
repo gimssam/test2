@@ -1,0 +1,20 @@
+<!--
+    Thymeleaf 스프링 부트 설정
+    다음 라이브러리를 추가하면(이미 추가되어 있다.) build.gradle
+
+    스프링 부트가 자동으로 ThymeleafViewResolver 와 필요한 스프링 빈들을 등록.
+    이 설정은 기본 값 이기 때문에 변경이 필요할 때만 설정.
+    [설정파일] = application.properties
+    spring.thymeleaf.prefix=classpath:/templates/
+    spring.thymeleaf.suffix=.html
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <head>
+    <meta charset="UTF-8">
+    <title>타임리프</title>
+</head>
+<body>
+<!-- text로 empty자리에 data로 바꿔줌 -->
+<p th:text="${data}">empty</p>
+</body>
+</html>
